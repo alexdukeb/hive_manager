@@ -1,15 +1,15 @@
 <?php 
-// src/Entity/Hive.php
+// src/Entity/Information.php
 namespace App\Entity;
 
-use App\Repository\HiveRepository;
+use App\Repository\InformationRepository;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=HiveRepository::class)
+ * @ORM\Entity(repositoryClass=InformationRepository::class)
  */
-class Hive
+class Information
 {
     /**
      * @ORM\Id()
