@@ -1,0 +1,40 @@
+.navbar {
+
+    .navbar-brand {
+        color: rgba(255,255,255,.5);
+    }
+    .navbar-nav {
+        .nav-item {
+            text-align: center;
+            @include medium() {
+                width: 150px;  
+            }
+
+            &.active {
+                background-color: black;
+            }
+
+            .hive_number {
+                color: white;
+                font-size: 12px;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: 0 3px;
+                background-color: red;
+                margin-left: 3px;
+            }
+            
+        }
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        @include medium() {
+            padding-left: 60px;
+            text-align: left;
+        }
+        @include desktop() {
+            padding-left: 120px;
+        }
+    }
+}
