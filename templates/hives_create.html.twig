@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Ajouter une ruche{% endblock %}
+
+{% block body %}
+
+<div class="hives_create container"> 
+    <a href="/hives" class="back_cta btn btn-secondary">Retour</a>
+
+    <h2>Ajouter une ruche</h2>
+
+    {{ form_start(createHiveForm) }}
+        {{ form_widget(createHiveForm) }}
+    {{ form_end(createHiveForm) }}
+</div>
+
+{% endblock %}
+

@@ -39,12 +39,12 @@ class Hive
         return $this->id;
     }
 
-    public function getHiveLat(): ?int
+    public function getHiveLat(): ?float
     {
         return $this->geo_lat;
     }
 
-    public function getHiveLong(): ?int
+    public function getHiveLong(): ?float
     {
         return $this->geo_long;
     }
@@ -55,6 +55,10 @@ class Hive
     }
 
 
+    public function setHiveName($name)
+    {
+        $this->name = $name;
+    }
     public function setHiveLat($lat)
     {
         $this->geo_lat = $lat;

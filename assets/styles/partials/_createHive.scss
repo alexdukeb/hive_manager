@@ -1,0 +1,23 @@
+.hives_create {
+    h2 {
+        margin-top: 15px;
+    }
+    .back_cta {
+        margin-top: 10px;
+    }
+    form {
+        width: 100%;
+        @include medium() {
+            width: 50%;
+            max-width: 500px;
+        }
+        margin: 0 auto;
+        margin-top: 50px;
+
+        button {
+            margin-left: 50%;
+            transform: translate(-50%);
+        }
+
+    }
+}

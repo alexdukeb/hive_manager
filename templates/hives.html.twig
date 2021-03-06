@@ -4,9 +4,38 @@
 
 {% block body %}
 
-<div class="hives">
-    {{ hives }}
+<div class="hives container">
+    <a class="btn btn-success text-white" href="hives/add">Ajouter une ruche</a>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Latitude</th>
+            <th scope="col">Longitude</th>
+            <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for hive in hives %}
+            <tr>
+                <td>{{hive.getName}}</td>
+                <td>{{hive.getHiveLong}}</td>
+                <td>{{hive.getHiveLat}}</td>
+                <td class="text-right">
+                    <a href="hives/edit/{{hive.getId}}" class="">Modifer</a> /
+                    <button data-id="{{hive.getId}}" class="delete_cta">Supprimer</button>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+        </table>
+    </div>
 </div>
 
 {% endblock %}
+{% block javascripts %}{{ encore_entry_script_tags('hives') }}{% endblock %}
 
