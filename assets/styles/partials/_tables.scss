@@ -1,0 +1,35 @@
+.table-responsive {
+    .dataTables_filter {
+        input {
+            border: none;
+            border-bottom: 1px solid rgba(0,0,0,.25);;
+        }
+    }
+    .dataTables_paginate {
+        height: 40px;
+        .paginate_button {
+            // box-sizing: content-box;
+            cursor: pointer;
+            padding: 5px;
+            border: 1px solid rgba(0,0,0,.25);
+
+            &.previous  {
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+            }
+            &.next  {
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+
+            &.current {
+                color: white;
+                border: 1px solid transparent;
+                background-color: #007bff;
+            }
+        }
+    }
+    .hives_table_wrapper {
+        overflow: hidden;
+    }
+}

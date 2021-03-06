@@ -6,7 +6,43 @@
 
 <div class="informations container">
     <h1>Informations des ruches</h1>
+
+    <div class="table-responsive">
+        <table id="info_table"
+        data-search="true"
+        data-sortable="true"
+        data-show-pagination-switch="true"
+        data-pagination="true"
+        data-page-list="[10, 25, 50, 100, all]"
+        class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th scope="col" data-field="hive" data-sortable="true">Ruche</th>
+                <th scope="col" data-field="date" data-sortable="true">Date</th>
+                <th scope="col" data-field="weight" data-sortable="true">Poids</th>
+                <th scope="col" data-field="temperature" data-sortable="true">Température</th>
+                <th scope="col" data-field="humidity" data-sortable="true">Humidité</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        {% for info in infos %}
+            <tr>
+                <td>{{info.getHiveName}}</td>
+                <td>{{info.getCreationDateTime}}</td>
+                <td>{{info.getWeight}}</td>
+                <td>{{info.getTemperature}}</td>
+                <td>{{info.getHumidity}}</td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+        </table>
+    </div>
 </div>
 
 {% endblock %}
+
+{% block javascripts %}{{ encore_entry_script_tags('informations') }}{% endblock %}
+
 

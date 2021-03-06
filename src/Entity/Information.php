@@ -38,6 +38,11 @@ class Information
      */
     private $humidity;
 
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $created_at;
+
    
     public function getId(): ?int
     {
@@ -66,6 +71,15 @@ class Information
     public function getHumidity()
     {
         return $this->humidity;
+    }
+
+    public function getCreationDateTime()
+    {
+        $datetime = $this->created_at->format('d F Y \à H\Hi');
+        $english_months = array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'Décember');
+        $french_months = array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+        return str_replace($english_months, $french_months, $datetime);
+        
     }
 
     public function setHive($hive)

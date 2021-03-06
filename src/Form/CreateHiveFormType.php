@@ -14,15 +14,6 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
 class CreateHiveFormType extends AbstractType {
 
-    private $client;
-
-    // public function configureOptions(OptionsResolver $resolver)
-    // {
-    //     $resolver->setDefaults([
-    //         'bat_id' => false
-    //     ]);
-    // }
-
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {           

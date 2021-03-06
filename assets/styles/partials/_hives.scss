@@ -1,12 +1,13 @@
 .hives {
     padding-top: 20px;
 
-    table {
+    .table-responsive {
         margin-top: 20px;
     }
 
     .delete_cta {
         border:none;
+        background-color: transparent;
         color: #007bff;
         &:hover {
             color: #0056b3;

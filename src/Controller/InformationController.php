@@ -28,11 +28,14 @@ class InformationController extends AbstractController
     */
     public function showAllInformations(Request $request): Response
     {
-        $hives = $this->hiverepository->findAll();
+        $hives_count = $this->hiverepository->createQueryBuilder('a')
+            ->select('count(a.id)')
+            ->getQuery()
+            ->getSingleScalarResult();
         $informations = $this->informationrepository->findAll();
         return $this->render('informations.html.twig', [
-            'hive_number'=> sizeof($hives),
-            'informations' => '$informations',
+            'hive_number'=> $hives_count,
+            'infos' => $informations,
         ]);
         
     }
