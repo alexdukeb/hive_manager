@@ -8,6 +8,7 @@ $(function() {
             "paging": true,
             "info": true,
             "searching": true,
+            "dom": 'ftlip',
             "language": {
                 "lengthMenu": "_MENU_ lignes par page",
                 "info": "Lignes _START_ à _END_ sur _TOTAL_",

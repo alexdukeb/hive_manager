@@ -22,8 +22,8 @@
         {% for hive in hives %}
             <tr>
                 <td>{{hive.getName}}</td>
-                <td>{{hive.getHiveLong}}</td>
                 <td>{{hive.getHiveLat}}</td>
+                <td>{{hive.getHiveLong}}</td>
                 <td class="text-right">
                     <a href="hives/edit/{{hive.getId}}" class="">Modifer</a> /
                     <button data-id="{{hive.getId}}" class="delete_cta">Supprimer</button>
