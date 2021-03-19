@@ -1,5 +1,4 @@
 # Hive Manager - Alexandre Ralli
-## Tallyos
 
 ## Stack
 
